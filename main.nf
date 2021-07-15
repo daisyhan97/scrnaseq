@@ -526,7 +526,8 @@ process star {
           --runDirPerm All_RWX \\
           --outFileNamePrefix $prefix $seq_center \\
           --soloType Droplet \\
-          --soloCBwhitelist $whitelist
+          --soloCBwhitelist $whitelist \\
+          --soloUMIlen 12
 
     samtools index ${prefix}Aligned.sortedByCoord.out.bam
     """
